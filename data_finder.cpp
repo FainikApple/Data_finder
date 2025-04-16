@@ -22,6 +22,21 @@ int finder(int month_1, int day_1, int year_1){
     }
 }
 
+int sigma_function(int day_1){
+    if (day_1 % 10 == 1){
+        cout << "st";
+    }
+    else if (day_1 % 10 == 2){
+        cout << "nd";
+    }
+    else if (day_1 % 10 == 3){
+        cout << "rd";
+    }
+    else{
+        cout << "th";
+    }
+}
+
 int sklonenie(int date){
     int ost = date % 10;
     int ost_100 = date % 100;
@@ -36,47 +51,85 @@ int sklonenie(int date){
     }
 }
 
-int months(int month){
+int months_eng(int month){
     if (month == 1){
-        cout << " €нвар€ ";
+        cout << " January ";
     }
     if (month == 2){
-        cout << " феврал€ ";
+        cout << " February ";
     }
     if (month == 3){
-        cout << " марта ";
+        cout << " March ";
     }
     if (month == 4){
-        cout << " апрел€ ";
+        cout << " April ";
     }
     if (month == 5){
-        cout << " ма€ ";
+        cout << " May ";
     }
     if (month == 6){
-        cout << " июн€ ";
+        cout << " June ";
     }
     if (month == 7){
-        cout << " июл€ ";
+        cout << " July ";
     }
     if (month == 8){
-        cout << " августа ";
+        cout << " August ";
     }
     if (month == 9){
-        cout << " сент€бр€ ";
+        cout << " September ";
     }
     if (month == 10){
-        cout << " окт€бр€ ";
+        cout << " October ";
     }
     if (month == 11){
-        cout << " но€бр€ ";
+        cout << " November ";
     }
     if (month == 12){
-        cout << " декабр€ ";
+        cout << " December ";
     }
 
 }
+int months_ru(int month){
+    if (month == 1){
+        cout << " январь ";
+    }
+    if (month == 2){
+        cout << " ‘евраль ";
+    }
+    if (month == 3){
+        cout << " ћарт ";
+    }
+    if (month == 4){
+        cout << " јпрель ";
+    }
+    if (month == 5){
+        cout << " ћай ";
+    }
+    if (month == 6){
+        cout << " »юнь ";
+    }
+    if (month == 7){
+        cout << " »юль ";
+    }
+    if (month == 8){
+        cout << " јвгуст ";
+    }
+    if (month == 9){
+        cout << " —ент€брь ";
+    }
+    if (month == 10){
+        cout << " ќкт€брь ";
+    }
+    if (month == 11){
+        cout << " Ќо€брь ";
+    }
+    if (month == 12){
+        cout << " ƒекабрь ";
+    }
+}
 
-int wow(int ch, int d, int m, int y, int h, int mi, int s, int d_1, int m_1, int y_1, int h_1, int mi_1, int s_1){
+int wow(string lang, int ch, int d, int m, int y, int h, int mi, int s, int d_1, int m_1, int y_1, int h_1, int mi_1, int s_1){
     int ost;
     int ost_100;
     int day_1;
@@ -137,119 +190,183 @@ int wow(int ch, int d, int m, int y, int h, int mi, int s, int d_1, int m_1, int
     //ƒЌ»
     switch(choice){
     case 1:
-        cout << day_1;
-        switch(sklonenie(day_1)){
-        case 0:
-            cout<<" день ";
-            break;
-        case 1:
-            cout<<" дней ";
-            break;
-        case 2:
-            cout<< " дн€ ";
-            break;
-        default:
-            cout<<"не бывает";
-            break;
-        }
-        //ћ≈—я÷џ
-        cout << month_1;
-        switch(sklonenie(month_1)){
-        case 0:
-            cout<<" мес€ц ";
-            break;
-        case 1:
-            cout<<" мес€цев ";
-            break;
-        case 2:
-            cout<< " мес€ца ";
-            break;
-        default:
-            cout<<"не бывает";
-            break;
-        }
+        if (lang == "ru"){
+            cout << day_1;
+            switch(sklonenie(day_1)){
+            case 0:
+                cout<<" день ";
+                break;
+            case 1:
+                cout<<" дней ";
+                break;
+            case 2:
+                cout<< " дн€ ";
+                break;
+            default:
+                cout<<"не бывает";
+                break;
+            }
+            //ћ≈—я÷џ
+            cout << month_1;
+            switch(sklonenie(month_1)){
+            case 0:
+                cout<<" мес€ц ";
+                break;
+            case 1:
+                cout<<" мес€цев ";
+                break;
+            case 2:
+                cout<< " мес€ца ";
+                break;
+            default:
+                cout<<"не бывает";
+                break;
+            }
 
-        //√ќƒј
-        cout << year_1;
-        switch(sklonenie(year_1)){
-        case 0:
-            cout<<" год ";
-            break;
-        case 1:
-            cout<<" лет ";
-            break;
-        case 2:
-            cout<< " года ";
-            break;
-        default:
-            cout<<"не бывает";
-            break;
-        }
-
-
-        //„ј—џ
-        cout << hour_1;
-        switch(sklonenie(hour_1)){
-        case 0:
-            cout<<" час ";
-            break;
-        case 1:
-            cout<<" часов ";
-            break;
-        case 2:
-            cout<< " часа ";
-            break;
-        default:
-            cout<<"не бывает";
-            break;
-        }
+            //√ќƒј
+            cout << year_1;
+            switch(sklonenie(year_1)){
+            case 0:
+                cout<<" год ";
+                break;
+            case 1:
+                cout<<" лет ";
+                break;
+            case 2:
+                cout<< " года ";
+                break;
+            default:
+                cout<<"не бывает";
+                break;
+            }
 
 
-        //ћ»Ќ”“џ
-        cout << minute_1;
-        switch(sklonenie(minute_1)){
-        case 0:
-            cout<<" минута ";
-            break;
-        case 1:
-            cout<<" минут ";
-            break;
-        case 2:
-            cout<< " минуты ";
-            break;
-        default:
-            cout<<"не бывает";
-            break;
-        }
+            //„ј—џ
+            cout << hour_1;
+            switch(sklonenie(hour_1)){
+            case 0:
+                cout<<" час ";
+                break;
+            case 1:
+                cout<<" часов ";
+                break;
+            case 2:
+                cout<< " часа ";
+                break;
+            default:
+                cout<<"не бывает";
+                break;
+            }
 
 
-        //—≈ ”Ќƒџ
-        cout << seconds_1;
-        switch(sklonenie(seconds_1)){
-        case 0:
-            cout<<" секунда ";
-            break;
-        case 1:
-            cout<<" секунд ";
-            break;
-        case 2:
-            cout<< " секунды ";
-            break;
-        default:
-            cout<<"не бывает";
-            break;
+            //ћ»Ќ”“џ
+            cout << minute_1;
+            switch(sklonenie(minute_1)){
+            case 0:
+                cout<<" минута ";
+                break;
+            case 1:
+                cout<<" минут ";
+                break;
+            case 2:
+                cout<< " минуты ";
+                break;
+            default:
+                cout<<"не бывает";
+                break;
+            }
+
+
+            //—≈ ”Ќƒџ
+            cout << seconds_1;
+            switch(sklonenie(seconds_1)){
+            case 0:
+                cout<<" секунда ";
+                break;
+            case 1:
+                cout<<" секунд ";
+                break;
+            case 2:
+                cout<< " секунды ";
+                break;
+            default:
+                cout<<"не бывает";
+                break;
         }
 
         cout << "назад" << endl;
+        }
+        else{
+            cout << "The ";
+            cout << day_1;
+            sigma_function(day_1);
+            cout << " of";
+            months_eng(month_1);
+            cout << year_1;
+            cout << " (year) ";
+            cout << hour_1;
+            if (0 > hour_1 & hour_1 < 2){
+                cout << "hour";
+            }
+            else{
+                cout << " hours ";
+            }
+            cout << minute_1;
+            if (0 < minute_1 & minute_1 < 2){
+                cout << " minute ";
+            }
+            else{
+                cout << " minutes ";
+            }
+            cout << seconds_1;
+            if (0 < seconds_1 & seconds_1 < 2){
+                cout << " second ";
+            }
+            else{
+                cout << " seconds ";
+            }
+        }
         break;
     case 2:
-        cout << day_1;
-        months(month_1);
-        cout << year_1;
-        cout << " года";
-        cout << " в " << hour_1 << " часов ";
-        cout << minute_1 << " минут ";
-        cout << seconds_1 << " секунд ";
+        if(lang == "ru"){
+            cout << day_1;
+            months_ru(month_1);
+            cout << year_1;
+            cout << " года";
+            cout << " в " << hour_1 << " часов ";
+            cout << minute_1 << " минут ";
+            cout << seconds_1 << " секунд ";
+            }
+        else{
+            cout << "The ";
+            cout << day_1;
+            sigma_function(day_1);
+            cout << " of";
+            months_eng(month_1);
+            cout << year_1;
+            cout << " (year) ";
+            cout << hour_1;
+            if (0 > hour_1 & hour_1 < 2){
+                cout << "hour";
+            }
+            else{
+                cout << " hours ";
+            }
+            cout << minute_1;
+            if (0 < minute_1 & minute_1 < 2){
+                cout << " minute ";
+            }
+            else{
+                cout << " minutes ";
+            }
+            cout << seconds_1;
+            if (0 < seconds_1 & seconds_1 < 2){
+                cout << " second ";
+            }
+            else{
+                cout << " seconds ";
+            }
+        }
         break;
     default:
         cout << "клавиатараоаврыапрврпыфарпдвымывпф";
@@ -259,7 +376,7 @@ int wow(int ch, int d, int m, int y, int h, int mi, int s, int d_1, int m_1, int
         cout<<"My official bday.";
     }
     if(day_1 == 11 & month_1 == 9 & year_1 == 2001 & hour_1 == 9 & minute_1 == 36 & seconds_1 == 18){
-        cout<<"Planie crushie :P";
+        cout<<"This was indeed a 'Planie crushie' day.";
     }
 }
 int main(){
@@ -277,7 +394,9 @@ int main(){
     int minutes_1;
     int seconds_1;
     int choice;
+    string language;
 
+    cin >> language;
     cin >> choice;
     cin >> day_1;
     cin >> month_1;
@@ -285,6 +404,6 @@ int main(){
     cin >> hours_1;
     cin >> minutes_1;
     cin >> seconds_1;
-    wow(choice, day, month, year, hours, minutes, seconds, day_1, month_1, year_1, hours_1, minutes_1, seconds_1);
+    wow(language, choice, day, month, year, hours, minutes, seconds, day_1, month_1, year_1, hours_1, minutes_1, seconds_1);
 }
 //https://youtu.be/-5wpm-gesOY?si=ILeHpNuHFNuAx7a7
