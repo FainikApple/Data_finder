@@ -256,7 +256,10 @@ int wow(int ch, int d, int m, int y, int h, int mi, int s, int d_1, int m_1, int
         break;
     }
     if(day_1 == 15 & month_1 == 5 & year_1 == 2012 & hour_1 == 6 & minute_1 == 30 & seconds_1 == 0){
-        cout<<"мой официальный др";
+        cout<<"My official bday.";
+    }
+    if(day_1 == 11 & month_1 == 9 & year_1 == 2001 & hour_1 == 9 & minute_1 == 36 & seconds_1 == 18){
+        cout<<"Planie crushie :P";
     }
 }
 int main(){
