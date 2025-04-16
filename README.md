@@ -1,5 +1,5 @@
 # How to use data finder.
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Data+finder+program)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Data+finder+program+based+on+Cpp)](https://git.io/typing-svg)
 ## Preparation ##
 - ***Type in "1" or "2". When ready, press "enter". (This thing won't do anything. It'll only change some forms of words. Mostly noticible in Russian.)***
 ## Main program ##
