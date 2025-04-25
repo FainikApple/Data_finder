@@ -13,3 +13,4 @@
 ## Current easter eggs ##
 - **Day == 15, month == 5, year == 2012, hours == 6, minutes == 30, seconds == 0.**
 - **Day == 11, month == 9, year == 2001, hours == 9, minutes == 36, seconds == 18.**
+- **Day == 1, month == 2, year == 3, hours == 4, minuts == 5, seconds == 6.**
