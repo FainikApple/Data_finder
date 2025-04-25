@@ -92,40 +92,40 @@ int months_eng(int month){
 }
 int months_ru(int month){
     if (month == 1){
-        cout << " Январь ";
+        cout << " Января ";
     }
     if (month == 2){
-        cout << " Февраль ";
+        cout << " Февраля ";
     }
     if (month == 3){
-        cout << " Март ";
+        cout << " Марта ";
     }
     if (month == 4){
-        cout << " Апрель ";
+        cout << " Апреля ";
     }
     if (month == 5){
-        cout << " Май ";
+        cout << " Мая ";
     }
     if (month == 6){
-        cout << " Июнь ";
+        cout << " Июня ";
     }
     if (month == 7){
-        cout << " Июль ";
+        cout << " Июля ";
     }
     if (month == 8){
-        cout << " Август ";
+        cout << " Августа ";
     }
     if (month == 9){
-        cout << " Сентябрь ";
+        cout << " Сентября ";
     }
     if (month == 10){
-        cout << " Октябрь ";
+        cout << " Октября ";
     }
     if (month == 11){
-        cout << " Ноябрь ";
+        cout << " Ноября ";
     }
     if (month == 12){
-        cout << " Декабрь ";
+        cout << " Декабря ";
     }
 }
 
@@ -297,34 +297,55 @@ int wow(string lang, int ch, int d, int m, int y, int h, int mi, int s, int d_1,
         cout << "назад" << endl;
         }
         else{
-            cout << "The ";
-            cout << day_1;
-            sigma_function(day_1);
-            cout << " of";
-            months_eng(month_1);
             cout << year_1;
-            cout << " (year) ";
+            if (year_1 == 1){
+                cout << " year ";
+            }
+            else{
+                cout << " years ";
+            }
+
+            cout << month_1;
+            if (month_1 == 1){
+                cout << " month ";
+            }
+            else{
+                cout << " months ";
+            }
+
+            cout << day_1;
+            if (day_1 == 1){
+                cout << " day ";
+            }
+            else{
+                cout << " days ";
+            }
+
             cout << hour_1;
-            if (0 > hour_1 & hour_1 < 2){
+            if (hour_1 == 1){
                 cout << "hour";
             }
             else{
                 cout << " hours ";
             }
+
             cout << minute_1;
-            if (0 < minute_1 & minute_1 < 2){
+            if (minute_1 == 1){
                 cout << " minute ";
             }
             else{
                 cout << " minutes ";
             }
+
             cout << seconds_1;
-            if (0 < seconds_1 & seconds_1 < 2){
+            if (seconds_1 == 1){
                 cout << " second ";
             }
             else{
                 cout << " seconds ";
             }
+
+            cout << "ago";
         }
         break;
     case 2:
@@ -343,8 +364,9 @@ int wow(string lang, int ch, int d, int m, int y, int h, int mi, int s, int d_1,
             sigma_function(day_1);
             cout << " of";
             months_eng(month_1);
+            cout << "of ";
             cout << year_1;
-            cout << " (year) ";
+            cout << " ";
             cout << hour_1;
             if (0 > hour_1 & hour_1 < 2){
                 cout << "hour";
